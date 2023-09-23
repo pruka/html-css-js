@@ -23,7 +23,8 @@ class MigrosBase{
     }
 
     urunleriKontrolEt(urunler){
-        if(urunler!=null && urunler.lenght>0){
+        console.log(urunler)
+        if(urunler!=null && urunler.length>0){
             return true
         }
         return false
