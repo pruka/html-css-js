@@ -9,9 +9,13 @@ class MigrosBase{
     hesapla(){
         let odenecekTutar = 0
         if(this.urunleriKontrolEt(this.urunler)){
-            this.urunler.forEach(element => {
-                odenecekTutar += (element.fiyat*(100-this.indirimOrani)/100)
-            });
+            if(this.kartVarmı){
+                this.urunler.forEach(element => {
+                    odenecekTutar += (element.fiyat*(100-this.indirimOrani)/100)});
+            }else{
+                this.urunler.forEach(element=>{odenecekTutar+=(element.fiyat)})
+            }
+
         }else{
             alert("Sepetinize birkaç ürün eklemelisiniz!")
         }

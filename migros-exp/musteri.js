@@ -3,6 +3,6 @@ class Musteri extends MigrosBase{
         super(isim, soyisim, kartVarmı, urunler)
     }
     hesapla(){
-        super.hesapla()
+        return super.hesapla()
     }
 }
